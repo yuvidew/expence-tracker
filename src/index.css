@@ -1,0 +1,27 @@
+:root,
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+
+  color-scheme: light dark;
+  background-color: #3B3B3B;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button{
+  cursor: pointer;
+  padding: .7rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: .8rem; 
+  color: #f3f2f2;
+}

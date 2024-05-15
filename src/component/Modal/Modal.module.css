@@ -1,0 +1,13 @@
+.cover{
+    position: absolute;
+    z-index: 99;
+    background-color: #ffffffaa;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}

@@ -1,0 +1,49 @@
+.formCard{
+    background-color: #ffffffec;
+    color: black;
+    padding: .6rem 1.4rem;
+    border-radius: 1rem;
+}
+
+.title{
+    font-size: 1.5rem;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, .1fr); 
+    gap: .7rem; 
+}
+
+.form input{
+    border: .1px solid #8c8a8aec;
+    outline: none;
+    padding: .7rem;
+    border-radius: .8rem;
+    color: #000;
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+
+.form select{
+    border: .1px solid #8c8a8aec;
+    outline: none;
+    padding: .7rem;
+    border-radius: .8rem;
+    color: #000;
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+
+.form button[type = "submit"]{
+    background-color: #f1b53e;
+    margin-top: 1rem;    
+    margin-bottom: 1rem;
+}
+
+.form button[type = "button"]{
+    background-color: #D9D9D9;
+    margin-top: 1rem;    
+    margin-bottom: 1rem;
+    color: black;
+}
