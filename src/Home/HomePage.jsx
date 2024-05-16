@@ -40,7 +40,7 @@ export const HomePage = () => {
         localStorage.setItem("wallet balance" , data)
         setIsOpenBalance(false)
     }
-    const handleAddExpense = (data) => {
+    const handleAddExpense = (data ) => {
         const expenseList = JSON.parse(localStorage.getItem('expenseList'))
         expenseList.push(data)
         localStorage.setItem("expenseList" , JSON.stringify(expenseList))
@@ -110,7 +110,9 @@ export const HomePage = () => {
             </Section>
 
             <Section IsSection={"2"}>
-                <TransitionList/>
+                <TransitionList 
+                    handleClick={() => setIsOpenExpense(true)}
+                />
                 <BarChart
                     data={[
                         { name: "Food", value: categorySpends.food },

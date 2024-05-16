@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import style from "./Expense.module.css"
 
 export const ExpenseForm = ({
     onAddExpense,
-    handleClose
+    handleClose,
+    edit,
+    expenseData
 }) => {
+    const inputDateRef = useRef(null)
     const [expense , setExpense] = useState({
         id : new Date().getTime(),
         title : "",
@@ -12,6 +15,25 @@ export const ExpenseForm = ({
         category : "",
         date : ""
     })
+
+    useEffect(() => {
+        editExpense()
+    } , [edit])
+
+    const editExpense = () => {
+        if(edit !== null && expenseData !== undefined){
+            setExpense({
+                id : expenseData[edit].id,
+                title : expenseData[edit].title,
+                price : expenseData[edit].price,
+                category : expenseData[edit].category,
+                date : expenseData[edit].data
+            })
+
+            inputDateRef.current.value = expenseData[edit].data
+        }
+    }
+
 
     const handleChange = (e) => {
         const {name , value} = e.target;
@@ -23,7 +45,7 @@ export const ExpenseForm = ({
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        onAddExpense(expense)
+        onAddExpense(expense , edit)
         handleClose()
     }
 
@@ -67,6 +89,7 @@ export const ExpenseForm = ({
                     type="date" 
                     value={expense.date}
                     onChange={handleChange}
+                    ref={inputDateRef}
                 />
                 
                 <button type='submit'>Add Expense</button>
