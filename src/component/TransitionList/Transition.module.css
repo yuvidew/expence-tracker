@@ -1,0 +1,125 @@
+.title{
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.article{
+    width: 55%;
+}
+
+.listContainer{
+    background: #fff;
+    border-radius: .8rem;
+    padding: .6rem;
+}
+
+.item{
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem;
+    color: #000;
+    height: 5rem;
+}
+
+.firstBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .8rem;
+}
+
+.iconBtn{
+    background-color: #D9D9D9;
+    color: #000;
+    padding: .7rem;
+    border-radius: 100%;
+}
+
+.iconBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.info{
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info h5{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.info p{
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9B9B9B;
+}
+
+.secondBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .8rem;
+}
+
+
+.secondBox h5{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    /* gap: rem; */
+    color: #F4BB4A;
+}
+
+.deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d03333;
+    padding: .7rem;
+}
+
+.editBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4BB4A;
+    padding: .7rem;
+}
+
+.BtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    padding: 1rem 0;
+}
+
+.BtnBox button{
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    background: transparent;
+    color: #000;
+}
+
+.centerBtn{
+    background-color: #43967B !important;
+    color: #fff !important;
+}

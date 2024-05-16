@@ -7,6 +7,8 @@ import { ModalWrapper } from '../component/Modal/ModalWrapper'
 import { BalanceForm } from '../component/BalanseForm/BalanceForm'
 import { ExpenseForm } from '../component/ExpenseForm/ExpenseForm'
 import PieChart from '../component/PieChart/PieChart'
+import { TransitionList } from '../component/TransitionList/TransitionList'
+import BarChart from '../component/BarChart/BarChart'
 
 export const HomePage = () => {
 
@@ -77,7 +79,6 @@ export const HomePage = () => {
         }
     } , [localStorage.getItem('expenseList')])
     
-    console.log("object" , categorySpends);
     return (
         <div>
             <Section title={"Expense Tracker"} IsSection={"1"} >
@@ -105,6 +106,17 @@ export const HomePage = () => {
                         { name: "Entertainment", value: categorySpends.entertainment },
                         { name: "Travel", value: categorySpends.travel },
                     ].filter(ele => ele.value)}
+                />
+            </Section>
+
+            <Section IsSection={"2"}>
+                <TransitionList/>
+                <BarChart
+                    data={[
+                        { name: "Food", value: categorySpends.food },
+                        { name: "Entertainment", value: categorySpends.entertainment },
+                        { name: "Travel", value: categorySpends.travel },
+                    ]}
                 />
             </Section>
 

@@ -16,6 +16,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 button{
   cursor: pointer;
   padding: .7rem 1.3rem;

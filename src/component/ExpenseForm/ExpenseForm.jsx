@@ -6,6 +6,7 @@ export const ExpenseForm = ({
     handleClose
 }) => {
     const [expense , setExpense] = useState({
+        id : new Date().getTime(),
         title : "",
         price : "",
         category : "",
